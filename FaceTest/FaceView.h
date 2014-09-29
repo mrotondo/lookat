@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FaceView.h
 //  FaceTest
 //
 //  Created by Logan Collins on 4/2/12.
@@ -7,11 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "FaceView.h"
 
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
+@interface FaceView : NSView
 
 @end

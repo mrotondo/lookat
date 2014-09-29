@@ -7,28 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		029CA822152A4A72004B0DC0 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CA821152A4A72004B0DC0 /* FaceView.m */; };
+		02D51DBF152A46A2007EB203 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D51DBE152A46A2007EB203 /* Quartz.framework */; };
+		D5B1894419D9257500787AF8 /* FaceTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1894319D9257500787AF8 /* FaceTracker.m */; };
+		D5BCDA6619CE8E0A0056E77D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */; };
+		D5BCDA6819CEC36A0056E77D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */; };
+		D5BCDA6B19CED2C30056E77D /* FaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BCDA6A19CED2C30056E77D /* FaceLayer.m */; };
 		EA0CA4151522C8FE00F81EFA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0CA4141522C8FE00F81EFA /* Cocoa.framework */; };
 		EA0CA41F1522C8FE00F81EFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0CA41D1522C8FE00F81EFA /* InfoPlist.strings */; };
 		EA0CA4211522C8FE00F81EFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CA4201522C8FE00F81EFA /* main.m */; };
-		EA0CA4251522C8FE00F81EFA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EA0CA4231522C8FE00F81EFA /* Credits.rtf */; };
 		EA0CA4281522C8FE00F81EFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0CA4271522C8FE00F81EFA /* AppDelegate.m */; };
 		EA0CA42B1522C8FE00F81EFA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0CA4291522C8FE00F81EFA /* MainMenu.xib */; };
+		EA0CA4351522D1D500F81EFA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0CA4341522D1D500F81EFA /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		029CA820152A4A72004B0DC0 /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		029CA821152A4A72004B0DC0 /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
+		02D51DBE152A46A2007EB203 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		D5B1894219D9257500787AF8 /* FaceTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceTracker.h; sourceTree = "<group>"; };
+		D5B1894319D9257500787AF8 /* FaceTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceTracker.m; sourceTree = "<group>"; };
+		D5B1894519D9298100787AF8 /* FaceTrackerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceTrackerDelegate.h; sourceTree = "<group>"; };
+		D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D5BCDA6919CED2C30056E77D /* FaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceLayer.h; sourceTree = "<group>"; };
+		D5BCDA6A19CED2C30056E77D /* FaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceLayer.m; sourceTree = "<group>"; };
 		EA0CA4101522C8FE00F81EFA /* FaceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0CA4141522C8FE00F81EFA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EA0CA4171522C8FE00F81EFA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		EA0CA4181522C8FE00F81EFA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EA0CA4191522C8FE00F81EFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EA0CA41C1522C8FE00F81EFA /* FaceTest-Info.plist */ = {isa = PBXFileReference; path = "FaceTest-Info.plist"; sourceTree = "<group>"; };
+		EA0CA41C1522C8FE00F81EFA /* FaceTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FaceTest-Info.plist"; sourceTree = "<group>"; };
 		EA0CA41E1522C8FE00F81EFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA0CA4201522C8FE00F81EFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA0CA4221522C8FE00F81EFA /* FaceTest-Prefix.pch */ = {isa = PBXFileReference; path = "FaceTest-Prefix.pch"; sourceTree = "<group>"; };
-		EA0CA4241522C8FE00F81EFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		EA0CA4261522C8FE00F81EFA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA0CA4221522C8FE00F81EFA /* FaceTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceTest-Prefix.pch"; sourceTree = "<group>"; };
+		EA0CA4261522C8FE00F81EFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA0CA4271522C8FE00F81EFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EA0CA42A1522C8FE00F81EFA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EA0CA4341522D1D500F81EFA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +52,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BCDA6819CEC36A0056E77D /* CoreMedia.framework in Frameworks */,
+				D5BCDA6619CE8E0A0056E77D /* AVFoundation.framework in Frameworks */,
 				EA0CA4151522C8FE00F81EFA /* Cocoa.framework in Frameworks */,
+				02D51DBF152A46A2007EB203 /* Quartz.framework in Frameworks */,
+				EA0CA4351522D1D500F81EFA /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +83,11 @@
 		EA0CA4131522C8FE00F81EFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */,
+				D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */,
 				EA0CA4141522C8FE00F81EFA /* Cocoa.framework */,
+				02D51DBE152A46A2007EB203 /* Quartz.framework */,
+				EA0CA4341522D1D500F81EFA /* QuartzCore.framework */,
 				EA0CA4161522C8FE00F81EFA /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -84,8 +108,15 @@
 			children = (
 				EA0CA4261522C8FE00F81EFA /* AppDelegate.h */,
 				EA0CA4271522C8FE00F81EFA /* AppDelegate.m */,
+				029CA820152A4A72004B0DC0 /* FaceView.h */,
+				029CA821152A4A72004B0DC0 /* FaceView.m */,
 				EA0CA4291522C8FE00F81EFA /* MainMenu.xib */,
 				EA0CA41B1522C8FE00F81EFA /* Supporting Files */,
+				D5BCDA6919CED2C30056E77D /* FaceLayer.h */,
+				D5BCDA6A19CED2C30056E77D /* FaceLayer.m */,
+				D5B1894219D9257500787AF8 /* FaceTracker.h */,
+				D5B1894319D9257500787AF8 /* FaceTracker.m */,
+				D5B1894519D9298100787AF8 /* FaceTrackerDelegate.h */,
 			);
 			path = FaceTest;
 			sourceTree = "<group>";
@@ -97,7 +128,6 @@
 				EA0CA41D1522C8FE00F81EFA /* InfoPlist.strings */,
 				EA0CA4201522C8FE00F81EFA /* main.m */,
 				EA0CA4221522C8FE00F81EFA /* FaceTest-Prefix.pch */,
-				EA0CA4231522C8FE00F81EFA /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -128,8 +158,8 @@
 		EA0CA4071522C8FE00F81EFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = "Sunflower Softworks";
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Panic, Inc";
 			};
 			buildConfigurationList = EA0CA40A1522C8FE00F81EFA /* Build configuration list for PBXProject "FaceTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -154,7 +184,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA0CA41F1522C8FE00F81EFA /* InfoPlist.strings in Resources */,
-				EA0CA4251522C8FE00F81EFA /* Credits.rtf in Resources */,
 				EA0CA42B1522C8FE00F81EFA /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +197,9 @@
 			files = (
 				EA0CA4211522C8FE00F81EFA /* main.m in Sources */,
 				EA0CA4281522C8FE00F81EFA /* AppDelegate.m in Sources */,
+				D5B1894419D9257500787AF8 /* FaceTracker.m in Sources */,
+				D5BCDA6B19CED2C30056E77D /* FaceLayer.m in Sources */,
+				029CA822152A4A72004B0DC0 /* FaceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,14 +212,6 @@
 				EA0CA41E1522C8FE00F81EFA /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		EA0CA4231522C8FE00F81EFA /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA0CA4241522C8FE00F81EFA /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		EA0CA4291522C8FE00F81EFA /* MainMenu.xib */ = {
@@ -251,6 +275,7 @@
 		EA0CA42F1522C8FE00F81EFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceTest/FaceTest-Prefix.pch";
 				INFOPLIST_FILE = "FaceTest/FaceTest-Info.plist";
@@ -262,6 +287,7 @@
 		EA0CA4301522C8FE00F81EFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FaceTest/FaceTest-Prefix.pch";
 				INFOPLIST_FILE = "FaceTest/FaceTest-Info.plist";
@@ -289,6 +315,7 @@
 				EA0CA4301522C8FE00F81EFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
