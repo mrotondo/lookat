@@ -12,9 +12,6 @@
 @interface FaceTracker () <AVCaptureVideoDataOutputSampleBufferDelegate>
 @property (nonatomic, strong) CIDetector *faceDetector;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
-@property (nonatomic, strong) AVCaptureDeviceInput *videoInput;
-@property (nonatomic, strong) AVCaptureVideoDataOutput *videoOutput;
-@property (nonatomic, strong) AVCaptureDevice *videoCaptureDevice;
 @property (nonatomic, assign) dispatch_queue_t videoDataQueue;
 @end
 
@@ -27,20 +24,20 @@
                                            options:@{CIDetectorAccuracy: CIDetectorAccuracyHigh}];
     
     self.captureSession = [[AVCaptureSession alloc] init];
-    self.videoCaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    AVCaptureDevice *videoCaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error = nil;
-    self.videoInput = [AVCaptureDeviceInput deviceInputWithDevice:self.videoCaptureDevice error:&error];
-    if (self.videoInput) {
-        [self.captureSession addInput:self.videoInput];
+    AVCaptureDeviceInput *videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoCaptureDevice error:&error];
+    if (videoInput) {
+        [self.captureSession addInput:videoInput];
     }
     else {
         // Handle the failure.
     }
     
-    self.videoOutput = [[AVCaptureVideoDataOutput alloc] init];
+    AVCaptureVideoDataOutput *videoOutput = [[AVCaptureVideoDataOutput alloc] init];
     self.videoDataQueue = dispatch_queue_create("videoData", DISPATCH_QUEUE_SERIAL);
-    [self.videoOutput setSampleBufferDelegate:self queue:self.videoDataQueue];
-    [self.captureSession addOutput:self.videoOutput];
+    [videoOutput setSampleBufferDelegate:self queue:self.videoDataQueue];
+    [self.captureSession addOutput:videoOutput];
     
     [self.captureSession startRunning];
     
