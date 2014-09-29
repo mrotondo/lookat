@@ -10,6 +10,9 @@
 		029CA822152A4A72004B0DC0 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CA821152A4A72004B0DC0 /* FaceView.m */; };
 		02D51DBF152A46A2007EB203 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D51DBE152A46A2007EB203 /* Quartz.framework */; };
 		D5B1894419D9257500787AF8 /* FaceTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1894319D9257500787AF8 /* FaceTracker.m */; };
+		D5B1894819D934F300787AF8 /* FaceJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1894719D934F300787AF8 /* FaceJoystick.m */; };
+		D5B1894B19D9367200787AF8 /* LowPassPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1894A19D9367200787AF8 /* LowPassPoint.m */; };
+		D5B1894E19D9400800787AF8 /* JoystickLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1894D19D9400800787AF8 /* JoystickLayer.m */; };
 		D5BCDA6619CE8E0A0056E77D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */; };
 		D5BCDA6819CEC36A0056E77D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */; };
 		D5BCDA6B19CED2C30056E77D /* FaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BCDA6A19CED2C30056E77D /* FaceLayer.m */; };
@@ -28,6 +31,12 @@
 		D5B1894219D9257500787AF8 /* FaceTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceTracker.h; sourceTree = "<group>"; };
 		D5B1894319D9257500787AF8 /* FaceTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceTracker.m; sourceTree = "<group>"; };
 		D5B1894519D9298100787AF8 /* FaceTrackerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceTrackerDelegate.h; sourceTree = "<group>"; };
+		D5B1894619D934F300787AF8 /* FaceJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceJoystick.h; sourceTree = "<group>"; };
+		D5B1894719D934F300787AF8 /* FaceJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceJoystick.m; sourceTree = "<group>"; };
+		D5B1894919D9367200787AF8 /* LowPassPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowPassPoint.h; sourceTree = "<group>"; };
+		D5B1894A19D9367200787AF8 /* LowPassPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LowPassPoint.m; sourceTree = "<group>"; };
+		D5B1894C19D9400800787AF8 /* JoystickLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoystickLayer.h; sourceTree = "<group>"; };
+		D5B1894D19D9400800787AF8 /* JoystickLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoystickLayer.m; sourceTree = "<group>"; };
 		D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		D5BCDA6919CED2C30056E77D /* FaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceLayer.h; sourceTree = "<group>"; };
@@ -117,6 +126,12 @@
 				D5B1894219D9257500787AF8 /* FaceTracker.h */,
 				D5B1894319D9257500787AF8 /* FaceTracker.m */,
 				D5B1894519D9298100787AF8 /* FaceTrackerDelegate.h */,
+				D5B1894619D934F300787AF8 /* FaceJoystick.h */,
+				D5B1894719D934F300787AF8 /* FaceJoystick.m */,
+				D5B1894919D9367200787AF8 /* LowPassPoint.h */,
+				D5B1894A19D9367200787AF8 /* LowPassPoint.m */,
+				D5B1894C19D9400800787AF8 /* JoystickLayer.h */,
+				D5B1894D19D9400800787AF8 /* JoystickLayer.m */,
 			);
 			path = FaceTest;
 			sourceTree = "<group>";
@@ -195,11 +210,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B1894B19D9367200787AF8 /* LowPassPoint.m in Sources */,
 				EA0CA4211522C8FE00F81EFA /* main.m in Sources */,
 				EA0CA4281522C8FE00F81EFA /* AppDelegate.m in Sources */,
+				D5B1894819D934F300787AF8 /* FaceJoystick.m in Sources */,
 				D5B1894419D9257500787AF8 /* FaceTracker.m in Sources */,
 				D5BCDA6B19CED2C30056E77D /* FaceLayer.m in Sources */,
 				029CA822152A4A72004B0DC0 /* FaceView.m in Sources */,
+				D5B1894E19D9400800787AF8 /* JoystickLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
