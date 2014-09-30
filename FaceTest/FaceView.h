@@ -8,7 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class AVCaptureSession;
 
 @interface FaceView : NSView
+
+@property (nonatomic, assign) CGSize captureImageSize;
+@property (nonatomic, strong) NSArray *faces;
+
+- (void)setPreviewLayerWithCaptureSession:(AVCaptureSession *)captureSession;
 
 @end

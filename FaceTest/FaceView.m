@@ -7,65 +7,79 @@
 //
 
 #import "FaceView.h"
-#import "FaceLayer.h"
 #import "FaceTrackerDelegate.h"
 #import "FaceJoystick.h"
-#import "JoystickLayer.h"
+#import "JoystickView.h"
 
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 
-@interface FaceView () <FaceTrackerDelegate>
-@property (nonatomic, strong) FaceLayer *faceLayer;
-@property (nonatomic, strong) FaceJoystick *faceJoystick;
-@property (nonatomic, strong) JoystickLayer *joystickLayer;
+@interface FaceView ()
+
 @end
 
 @implementation FaceView
 
-- (id)initWithFrame:(NSRect)frameRect {
-    self = [super initWithFrame:frameRect];
-    if (self) {
-        [self setLayer:[CALayer layer]];
-        [self setWantsLayer:YES];
-        
-        self.faceLayer = [[FaceLayer alloc] init];
-        self.faceLayer.frame = self.bounds;
-        [self.layer addSublayer:self.faceLayer];
-
-        self.joystickLayer = [[JoystickLayer alloc] init];
-        self.joystickLayer.frame = self.bounds;
-        [self.layer addSublayer:self.joystickLayer];
-        
-        self.layer.backgroundColor = [NSColor orangeColor].CGColor;
-        
-        self.faceJoystick = [[FaceJoystick alloc] initWithDeadZoneMagnitude:200.0];
-    }
-    return self;
-}
-
-- (void)faceTracker:(FaceTracker *)faceTracker createdCaptureSession:(AVCaptureSession *)captureSession
+- (void)setPreviewLayerWithCaptureSession:(AVCaptureSession *)captureSession
 {
     CALayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:captureSession];
     previewLayer.frame = self.bounds;
-    [self.layer insertSublayer:previewLayer below:self.faceLayer];
+    [self.layer insertSublayer:previewLayer atIndex:0];
 }
 
-- (void)faceTracker:(FaceTracker *)faceTracker updatedWithFaces:(NSArray *)faces fromImageOfSize:(CGSize)imageSize
+- (void)drawRect:(NSRect)dirtyRect
 {
-    self.faceLayer.imageSize = imageSize;
-    self.faceLayer.faces = faces;
+    CGContextRef c = [[NSGraphicsContext currentContext] CGContext];
     
-    [self.faceJoystick updateWithFaces:faces fromImageOfSize:imageSize];
+    // Create an NSImage representation of the image
+    CGFloat scaleFactor = 1.0;
     
-    self.joystickLayer.deadZoneMagnitude = self.faceJoystick.deadZoneMagnitude;
-    self.joystickLayer.joystickPoint = self.faceJoystick.currentPoint;
+    CGSize targetSize = NSSizeToCGSize([self bounds].size);
+    CGSize imageSize = self.captureImageSize;
     
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [self.faceLayer setNeedsDisplay];
-        [self.joystickLayer setNeedsDisplay];
-    });
+    CGFloat widthDelta = imageSize.width - targetSize.width;
+    CGFloat heightDelta = imageSize.height - targetSize.height;
+    
+    if (widthDelta >= heightDelta) {
+        // Scale to width
+        scaleFactor = targetSize.width / imageSize.width;
+    }
+    else {
+        // Scale to height
+        scaleFactor = targetSize.height / imageSize.height;
+    }
+    
+    // Iterate the detected faces
+    for (CIFaceFeature *face in _faces) {
+        // Get the bounding rectangle of the face
+        CGRect bounds = face.bounds;
+        
+        [[NSColor redColor] set];
+        CGContextStrokeRect(c, CGRectMake(bounds.origin.x * scaleFactor, bounds.origin.y * scaleFactor, bounds.size.width * scaleFactor, bounds.size.height * scaleFactor));
+        
+        // Get the position of facial features
+        if (face.hasLeftEyePosition) {
+            CGPoint leftEyePosition = face.leftEyePosition;
+            
+            [[NSColor blueColor] set];
+            CGContextStrokeRect(c, CGRectMake(leftEyePosition.x * scaleFactor - 10.0, leftEyePosition.y * scaleFactor - 10.0, 20.0, 20.0));
+        }
+        
+        if (face.hasRightEyePosition) {
+            CGPoint rightEyePosition = face.rightEyePosition;
+            
+            [[NSColor blueColor] set];
+            CGContextStrokeRect(c, CGRectMake(rightEyePosition.x * scaleFactor - 10.0, rightEyePosition.y * scaleFactor - 10.0, 20.0, 20.0));
+        }
+        
+        if (face.hasMouthPosition) {
+            CGPoint mouthPosition = face.mouthPosition;
+            
+            [[NSColor blueColor] set];
+            CGContextStrokeRect(c, CGRectMake(mouthPosition.x * scaleFactor - 10.0, mouthPosition.y * scaleFactor - 10.0, 20.0, 20.0));
+        }
+    }
 }
 
 @end
