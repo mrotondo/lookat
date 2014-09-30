@@ -845,13 +845,12 @@
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">274</int>
 							<array class="NSMutableArray" key="NSSubviews">
-								<object class="NSCustomView" id="675610019">
+								<object class="NSCustomView" id="8285338">
 									<reference key="NSNextResponder" ref="474787645"/>
 									<int key="NSvFlags">268</int>
 									<string key="NSFrameSize">{1280, 720}</string>
 									<reference key="NSSuperview" ref="474787645"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSClassName">JoystickView</string>
 								</object>
@@ -859,7 +858,7 @@
 							<string key="NSFrameSize">{1280, 720}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="675610019"/>
+							<reference key="NSNextKeyView" ref="8285338"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">FaceView</string>
 						</object>
@@ -878,10 +877,10 @@
 			<object class="NSCustomObject" id="976324537">
 				<string key="NSClassName">AppDelegate</string>
 			</object>
-			<object class="NSCustomObject" id="581853163">
+			<object class="NSCustomObject" id="599699389">
 				<string key="NSClassName">FaceTracker</string>
 			</object>
-			<object class="NSCustomObject" id="416100056">
+			<object class="NSCustomObject" id="873176111">
 				<string key="NSClassName">FaceNavViewController</string>
 			</object>
 		</array>
@@ -1298,15 +1297,15 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="581853163"/>
-						<reference key="destination" ref="416100056"/>
+						<reference key="source" ref="599699389"/>
+						<reference key="destination" ref="873176111"/>
 					</object>
 					<int key="connectionID">581</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">faceView</string>
-						<reference key="source" ref="416100056"/>
+						<reference key="source" ref="873176111"/>
 						<reference key="destination" ref="474787645"/>
 					</object>
 					<int key="connectionID">578</int>
@@ -1314,7 +1313,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">view</string>
-						<reference key="source" ref="416100056"/>
+						<reference key="source" ref="873176111"/>
 						<reference key="destination" ref="439893737"/>
 					</object>
 					<int key="connectionID">580</int>
@@ -1322,8 +1321,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">joystickView</string>
-						<reference key="source" ref="416100056"/>
-						<reference key="destination" ref="675610019"/>
+						<reference key="source" ref="873176111"/>
+						<reference key="destination" ref="8285338"/>
 					</object>
 					<int key="connectionID">579</int>
 				</object>
@@ -1956,25 +1955,25 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">574</int>
-						<reference key="object" ref="581853163"/>
+						<reference key="object" ref="599699389"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">571</int>
 						<reference key="object" ref="474787645"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="675610019"/>
+							<reference ref="8285338"/>
 						</array>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">577</int>
-						<reference key="object" ref="416100056"/>
+						<reference key="object" ref="873176111"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">576</int>
-						<reference key="object" ref="675610019"/>
+						<reference key="object" ref="8285338"/>
 						<reference key="parent" ref="474787645"/>
 					</object>
 				</array>

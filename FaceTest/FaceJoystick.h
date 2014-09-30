@@ -12,8 +12,10 @@
 
 @property (nonatomic, readonly) CGPoint currentPoint;
 @property (nonatomic, readonly) float deadZoneMagnitude;
+@property (nonatomic, readonly) CGPoint center;
 
 - (instancetype)initWithDeadZoneMagnitude:(float)deadZoneMagnitude;
 - (void)updateWithFaces:(NSArray *)faces fromImageOfSize:(CGSize)imageSize;
+- (void)setCenterToCurrentPoint;
 
 @end

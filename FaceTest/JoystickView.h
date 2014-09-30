@@ -8,9 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class FaceJoystick;
+
 @interface JoystickView : NSView
 
-@property (nonatomic, assign) float deadZoneMagnitude;
-@property (nonatomic, assign) CGPoint joystickPoint;
+@property (nonatomic, strong) FaceJoystick *joystick;
 
 @end

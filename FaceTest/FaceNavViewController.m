@@ -22,9 +22,21 @@
 
 @implementation FaceNavViewController
 
+- (void)awakeFromNib
+{
+//    [[NSApplication sharedApplication] setNextResponder:self];
+//    [self becomeFirstResponder];
+}
+
+- (BOOL)acceptsFirstResponder
+{
+    return YES;
+}
+
 - (void)viewDidLoad
 {
-    self.faceJoystick = [[FaceJoystick alloc] initWithDeadZoneMagnitude:200.0];
+    self.faceJoystick = [[FaceJoystick alloc] initWithDeadZoneMagnitude:100.0];
+    self.joystickView.joystick = self.faceJoystick;
 }
 
 - (void)faceTracker:(FaceTracker *)faceTracker createdCaptureSession:(AVCaptureSession *)captureSession
@@ -38,8 +50,6 @@
     self.faceView.faces = faces;
     
     [self.faceJoystick updateWithFaces:faces fromImageOfSize:captureImageSize];
-    self.joystickView.deadZoneMagnitude = self.faceJoystick.deadZoneMagnitude;
-    self.joystickView.joystickPoint = self.faceJoystick.currentPoint;
     
     dispatch_sync(dispatch_get_main_queue(), ^{
         [self.faceView setNeedsDisplay:YES];

@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) LowPassPoint *joystickPoint;
 @property (nonatomic, assign) float deadZoneMagnitude;
+@property (nonatomic, assign) CGPoint center;
 
 @end
 
@@ -25,11 +26,12 @@
     if (self) {
         self.joystickPoint = [[LowPassPoint alloc] initWithDecay:8.0 initialPoint:CGPointMake(0.5, 0.5)];
         self.deadZoneMagnitude = deadZoneMagnitude;
+        self.center = CGPointMake(0.5, 0.5);
     }
     return self;
 }
 
-- (void)updateWithFaces:(NSArray *)faces fromImageOfSize:(CGSize)imageSize
+- (void)updateWithFaces:(NSArray *)faces fromImageOfSize:(CGSize)captureImageSize
 {
     if (faces.count > 0)
     {
@@ -38,11 +40,16 @@
             CGPoint leftEyePosition = face.leftEyePosition;
             CGPoint rightEyePosition = face.rightEyePosition;
             // Normalize the centroid so that our joystick point is always in [0, 1]
-            CGPoint centroid = CGPointMake(((leftEyePosition.x + rightEyePosition.x) / 2.0) / imageSize.width,
-                                           ((leftEyePosition.y + rightEyePosition.y) / 2.0) / imageSize.height);
-            [self.joystickPoint updateWithCGPoint:centroid];
+            CGPoint normalizedCentroid = CGPointMake(((leftEyePosition.x + rightEyePosition.x) / 2.0) / captureImageSize.width,
+                                           ((leftEyePosition.y + rightEyePosition.y) / 2.0) / captureImageSize.height);
+            [self.joystickPoint updateWithCGPoint:normalizedCentroid];
         }
     }
+}
+
+- (void)setCenterToCurrentPoint
+{
+    self.center = self.joystickPoint.currentValue;
 }
 
 - (CGPoint)currentPoint
