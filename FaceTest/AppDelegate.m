@@ -10,6 +10,12 @@
 #import <Quartz/Quartz.h>
 #import <AVFoundation/AVFoundation.h>
 
+@interface AppDelegate ()
+
+@property (nonatomic, strong) IBOutlet NSResponder *inputHandler;
+
+@end
+
 @implementation AppDelegate
 
 - (id)init {
@@ -21,10 +27,11 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self.window makeFirstResponder:self.inputHandler];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
-    [[self window] makeKeyAndOrderFront:nil];
+    [[self window] makeKeyAndOrderFront:nil];    
     return YES;
 }
 

@@ -12,6 +12,8 @@
 #import "FaceJoystick.h"
 #import "FaceTrackerDelegate.h"
 
+#import <Carbon/Carbon.h>
+
 @interface FaceNavViewController () <FaceTrackerDelegate>
 
 @property (nonatomic, strong) IBOutlet FaceView *faceView;
@@ -22,21 +24,18 @@
 
 @implementation FaceNavViewController
 
-- (void)awakeFromNib
-{
-//    [[NSApplication sharedApplication] setNextResponder:self];
-//    [self becomeFirstResponder];
-}
-
-- (BOOL)acceptsFirstResponder
-{
-    return YES;
-}
-
 - (void)viewDidLoad
 {
     self.faceJoystick = [[FaceJoystick alloc] initWithDeadZoneMagnitude:100.0];
     self.joystickView.joystick = self.faceJoystick;
+}
+
+- (void)keyDown:(NSEvent *)theEvent
+{
+    if (theEvent.keyCode == kVK_Return)
+    {
+        [self.faceJoystick setCenterToCurrentPoint];
+    }
 }
 
 - (void)faceTracker:(FaceTracker *)faceTracker createdCaptureSession:(AVCaptureSession *)captureSession

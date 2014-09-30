@@ -9,14 +9,8 @@
 #import "JoystickView.h"
 #import "FaceJoystick.h"
 #import "AppDelegate.h"
-#import <Carbon/Carbon.h>
 
 @implementation JoystickView
-
-- (BOOL)acceptsFirstResponder
-{
-    return YES;
-}
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
@@ -34,18 +28,6 @@
                                              self.joystick.currentPoint.y * self.bounds.size.height - joystickCircleRadius,
                                              joystickCircleRadius * 2, joystickCircleRadius * 2));
 
-}
-
-- (void)mouseDown:(NSEvent *)theEvent
-{
-}
-
-- (void)keyDown:(NSEvent *)theEvent
-{
-    if (theEvent.keyCode == kVK_Return)
-    {
-        [self.joystick setCenterToCurrentPoint];
-    }
 }
 
 @end
