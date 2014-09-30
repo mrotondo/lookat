@@ -11,13 +11,16 @@
 #import "JoystickView.h"
 #import "FaceJoystick.h"
 #import "FaceTrackerDelegate.h"
+#import "TestScene.h"
 
 #import <Carbon/Carbon.h>
+#import <SceneKit/SceneKit.h>
 
 @interface FaceNavViewController () <FaceTrackerDelegate>
 
 @property (nonatomic, strong) IBOutlet FaceView *faceView;
 @property (nonatomic, strong) IBOutlet JoystickView *joystickView;
+@property (nonatomic, strong) IBOutlet SCNView *sceneView;
 @property (nonatomic, strong) FaceJoystick *faceJoystick;
 
 @end
@@ -28,6 +31,9 @@
 {
     self.faceJoystick = [[FaceJoystick alloc] initWithDeadZoneMagnitude:100.0];
     self.joystickView.joystick = self.faceJoystick;
+    
+    self.sceneView.backgroundColor = [NSColor blackColor];
+    self.sceneView.scene = [[TestScene alloc] init];
 }
 
 - (void)keyDown:(NSEvent *)theEvent

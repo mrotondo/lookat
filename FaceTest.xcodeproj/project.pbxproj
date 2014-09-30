@@ -15,6 +15,8 @@
 		D5B1895119DA8EDB00787AF8 /* JoystickView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1895019DA8EDB00787AF8 /* JoystickView.m */; };
 		D5B1895419DA913D00787AF8 /* FaceNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1895319DA913D00787AF8 /* FaceNavViewController.m */; };
 		D5B1895619DA9BF800787AF8 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B1895519DA9BF800787AF8 /* Carbon.framework */; };
+		D5B1895819DAA6CB00787AF8 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B1895719DAA6CB00787AF8 /* SceneKit.framework */; };
+		D5B1895B19DAA78000787AF8 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1895A19DAA78000787AF8 /* TestScene.m */; };
 		D5BCDA6619CE8E0A0056E77D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */; };
 		D5BCDA6819CEC36A0056E77D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */; };
 		EA0CA4151522C8FE00F81EFA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0CA4141522C8FE00F81EFA /* Cocoa.framework */; };
@@ -41,6 +43,9 @@
 		D5B1895219DA913D00787AF8 /* FaceNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceNavViewController.h; sourceTree = "<group>"; };
 		D5B1895319DA913D00787AF8 /* FaceNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceNavViewController.m; sourceTree = "<group>"; };
 		D5B1895519DA9BF800787AF8 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		D5B1895719DAA6CB00787AF8 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		D5B1895919DAA78000787AF8 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScene.h; sourceTree = "<group>"; };
+		D5B1895A19DAA78000787AF8 /* TestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScene.m; sourceTree = "<group>"; };
 		D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		EA0CA4101522C8FE00F81EFA /* FaceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B1895819DAA6CB00787AF8 /* SceneKit.framework in Frameworks */,
 				D5B1895619DA9BF800787AF8 /* Carbon.framework in Frameworks */,
 				D5BCDA6819CEC36A0056E77D /* CoreMedia.framework in Frameworks */,
 				D5BCDA6619CE8E0A0056E77D /* AVFoundation.framework in Frameworks */,
@@ -95,6 +101,7 @@
 		EA0CA4131522C8FE00F81EFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5B1895719DAA6CB00787AF8 /* SceneKit.framework */,
 				D5B1895519DA9BF800787AF8 /* Carbon.framework */,
 				D5BCDA6719CEC36A0056E77D /* CoreMedia.framework */,
 				D5BCDA6519CE8E0A0056E77D /* AVFoundation.framework */,
@@ -136,6 +143,8 @@
 				D5B1895019DA8EDB00787AF8 /* JoystickView.m */,
 				D5B1895219DA913D00787AF8 /* FaceNavViewController.h */,
 				D5B1895319DA913D00787AF8 /* FaceNavViewController.m */,
+				D5B1895919DAA78000787AF8 /* TestScene.h */,
+				D5B1895A19DAA78000787AF8 /* TestScene.m */,
 			);
 			path = FaceTest;
 			sourceTree = "<group>";
@@ -222,6 +231,7 @@
 				D5B1894819D934F300787AF8 /* FaceJoystick.m in Sources */,
 				D5B1894419D9257500787AF8 /* FaceTracker.m in Sources */,
 				029CA822152A4A72004B0DC0 /* FaceView.m in Sources */,
+				D5B1895B19DAA78000787AF8 /* TestScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
